@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es-es">
+<head>
+        <title></title>
+        <meta charset="utf-8">
+        <style>
+        div {
+            width: 14rem;
+            height: 9rem;
+            position: absolute;
+            top: 6rem;
+            overflow: hidden;
+            z-index: -1;
+        }
+		
+</style>
+<link rel="stylesheet" media="screen" type="text/css" href="normal.css" />
+
+<style type="text/css">
+@media handheld
+body{width:20%;font-family:Verdana;font-size:16px;} 
+</style>
+        <script>
+        function addDescripcion(cbox){
+            var desc = document.getElementById("descGralSolicitud")
+                desc2 = document.getElementById("descGralSolicitud2");;
+			var importe =  document.getElementById(cbox.name+"text");
+
+			if (importe.value != "")
+			{
+				if(cbox.checked){
+					desc2.insertAdjacentHTML('beforeend', '\n<span class="' + cbox.id + '">' + cbox.nextElementSibling.textContent + importe.value +'</span>' )
+				}else{
+					desc2.removeChild(document.querySelector('.'+cbox.id));
+					importe.value="";
+				}
+	 
+				desc.textContent = desc2.textContent;
+			}
+			else
+			{
+				alert("Antes de seleccionar un producto debe indicar la cantidad");
+				cbox.checked= false;
+			}
+		}
+
+        </script>
+		
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+    </head>
+	<body>
+	<table width="40%" height="160%"  border="1">
+         <tr>
+            <td width="30%" height="50%" colspan=2>
+				<center>
+				<img src="https://drive.google.com/uc?export=view&id=1O1XRsb5efvXG0h_ofMhaM4ijWV2EkFZr" width="320" height="100">
+				</center>
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2">
+				<FORM action="https://api.whatsapp.com/send" method="get">
+				<input type="text" name="phone" value="34675171801" hidden="true"><br>
+					Marque el check si desea añadir al pedido<p>
+			</td>
+		</tr>	
+		<tr>
+            <td>
+				<input type="checkbox" name="idchk1" id="idchk1" onclick="addDescripcion(this)"> <span id="desc1"> Pan - </span>
+            </td>
+			<td>
+				<input type="text" id="idchk1text" name="importe1">
+			</td>
+        </tr>
+		<tr>
+			 <td>
+			    <input type="checkbox" name="idchk2" id="idchk2" onclick="addDescripcion(this)"> <span id="desc2"> Leche - </span>
+			 </td>
+			 <td>
+				<input type="text" id="idchk2text" name="importe2">
+			 </td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="idchk3" id="idchk3" onclick="addDescripcion(this)"> <span id="desc3"> Jamón del país - </span>
+			</td>
+			 <td>
+				<input type="text" id="idchk3text" name="importe3">
+			 </td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="idchk4" id="idchk4" onclick="addDescripcion(this)"> <span id="desc4"> Queso - </span>
+			</td>
+			 <td>
+				<input type="text" id="idchk4text" name="importe4">
+			 </td>
+		</tr>
+		<tr>
+			<td colspan=2>
+				<textarea name="text" id="descGralSolicitud" cols="30" rows="10" readonly="true" hidden="true"></textarea>
+				<div id="descGralSolicitud2" contentEditable="true" hidden="true"></div>
+				<center><input type="submit" value="Enviar por Whatsapp"></center>
+			</td>
+		</tr>
+	</table>
+    	
+    </form>
+    </body>
+</html>
