@@ -28,7 +28,7 @@
                     imagen: 'https://source.unsplash.com/random/80x80/?zucchini&sig=3'
                 },
                 {
-                    id: 4,
+                    id: 4,ö
                     nombre: 'salchicha',
                     precio: 0.6,
                     imagen: 'https://source.unsplash.com/random/80x80/?burrs&sig=4'
@@ -45,22 +45,22 @@
                 for (let info of baseDeDatos) {
                     // Estructura
                     let miNodo = document.createElement('div');
-                    miNodo.classList.add('card', 'col-sm-1');
+                    miNodo.classList.add('card', 'col-sm-4');
                     // Body
                     let miNodoCardBody = document.createElement('div');
                     miNodoCardBody.classList.add('card-body');
                     // Titulo
                     let miNodoTitle = document.createElement('h5');
-                    miNodoTitle.classList.add('card-title');
-                    miNodoTitle.textContent = info['nombre'];
+                    miNodoImagen.classList.add('card-title');
+                    miNodoImagen.textContent = info['nombre'];
                     // Imagen
                     let miNodoImagen = document.createElement('img');
                     miNodoImagen.classList.add('img-fluid');
                     miNodoImagen.setAttribute('src', info['imagen']);
                     // Precio
                     let miNodoPrecio = document.createElement('p');
-                    miNodoPrecio.classList.add('card-text');
-                    miNodoPrecio.textContent = info['precio'] + '€';
+                    miNodoImagen.classList.add('card-text');
+                    miNodoImagen.textContent = info['precio'] + '€';
                     // Boton 
                     let miNodoBoton = document.createElement('button');
                     miNodoBoton.classList.add('btn', 'btn-primary');
