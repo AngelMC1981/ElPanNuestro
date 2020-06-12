@@ -17,7 +17,7 @@
                 },
                 {
                     id: 2,
-                    nombre: 'mantequilla',
+                    nombre: 'manteca',
                     precio: 1.2,
                     imagen: 'https://source.unsplash.com/random/80x80/?onion&sig=2'
                 },
@@ -51,16 +51,16 @@
                     miNodoCardBody.classList.add('card-body');
                     // Titulo
                     let miNodoTitle = document.createElement('h5');
-                    miNodoImagen.classList.add('card-title');
-                    miNodoImagen.textContent = info['nombre'];
+                    miNodoTitle.classList.add('card-title');
+                    miNodoTitle.textContent = info['nombre'];
                     // Imagen
                     let miNodoImagen = document.createElement('img');
                     miNodoImagen.classList.add('img-fluid');
                     miNodoImagen.setAttribute('src', info['imagen']);
                     // Precio
                     let miNodoPrecio = document.createElement('p');
-                    miNodoImagen.classList.add('card-text');
-                    miNodoImagen.textContent = info['precio'] + '€';
+                    miNodoPrecio.classList.add('card-text');
+                    miNodoPrecio.textContent ='S/.' + info['precio'];
                     // Boton 
                     let miNodoBoton = document.createElement('button');
                     miNodoBoton.classList.add('btn', 'btn-primary');
