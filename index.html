@@ -67,11 +67,14 @@
                     miNodoBoton.textContent = '+';
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
-                    // Insertamos
-                    //miNodoCardBody.appendChild(miNodoImagen);
-                    miNodoCardBody.appendChild(miNodoTitle);
-                    miNodoCardBody.appendChild(miNodoPrecio);
-                    miNodoCardBody.appendChild(miNodoBoton);
+                    // Insertamos 
+                    miNodoCardBody.appendChild(miNodoImagen);
+                    insertAfter(miNodoImagen,miNodoTitle)
+                    insertAfter(miNodoTitle,miNodoPrecio)
+                    insertAfter(miNodoPrecio,miNodoBoton)
+                    //miNodoCardBody.appendChild(miNodoTitle);
+                    //miNodoCardBody.appendChild(miNodoPrecio);
+                    //miNodoCardBody.appendChild(miNodoBoton);
                     miNodo.appendChild(miNodoCardBody);
                     $items.appendChild(miNodo);
                 }
@@ -150,6 +153,14 @@
             }
             // Eventos
 
+            function insertAfter(e,i){ 
+                if(e.nextSibling){ 
+                    e.parentNode.insertBefore(i,e.nextSibling); 
+                } else { 
+                    e.parentNode.appendChild(i); 
+                }
+            }
+              
             // Inicio
             renderItems();
         } 
