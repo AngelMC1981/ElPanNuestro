@@ -58,7 +58,7 @@
                     miNodoImagen.classList.add('img-fluid');
                     miNodoImagen.setAttribute('src', info['imagen']);
                     // Precio
-                    let miNodoPrecio = document.createElement('p');
+                    let miNodoPrecio = document.createElement('h5');
                     miNodoPrecio.classList.add('card-text');
                     miNodoPrecio.textContent = 'S/.'+info['precio'];
                     // Boton 
@@ -68,7 +68,7 @@
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
                     // Insertamos
-                    //miNodoCardBody.appendChild(miNodoImagen);
+                    miNodoCardBody.appendChild(miNodoImagen);
                     miNodoCardBody.appendChild(miNodoTitle);
                     miNodoCardBody.appendChild(miNodoPrecio);
                     miNodoCardBody.appendChild(miNodoBoton);
