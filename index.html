@@ -45,7 +45,7 @@
                 for (let info of baseDeDatos) {
                     // Estructura
                     let miNodo = document.createElement('div');
-                    //miNodo.classList.add('card', 'col-sm-12');
+                    miNodo.classList.add('card', 'col-sm-12');
                     // Body
                     let miNodoCardBody = document.createElement('div');
                     miNodoCardBody.classList.add('card-body');
@@ -72,8 +72,9 @@
                     miNodoCardBody.appendChild(miNodoTitle);
                     miNodoCardBody.appendChild(miNodoPrecio);
                     miNodoCardBody.appendChild(miNodoBoton);
-                    miNodo.appendChild(miNodoCardBody);
-                    $items.appendChild(miNodo);
+                    $items.appendChild(miNodoCardBody);
+                    //miNodo.appendChild(miNodoCardBody);
+                    //$items.appendChild(miNodo);
                 }
             }
 
