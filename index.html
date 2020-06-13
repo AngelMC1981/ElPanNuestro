@@ -68,10 +68,8 @@
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
                     // Insertamos
-                    miNodoCardBody.appendChild(miNodoImagen);
-                    miNodoCardBody.appendChild(miNodoTitle);
-                    miNodoCardBody.appendChild(miNodoPrecio);
-                    miNodoCardBody.appendChild(miNodoBoton);
+                    miNodoCardBody.appendChild(miNodoImagen + miNodoTitle + miNodoPrecio + miNodoBoton);
+
                     miNodo.appendChild(miNodoCardBody);
                     $items.appendChild(miNodo);
                 }
