@@ -45,7 +45,7 @@
                 for (let info of baseDeDatos) {
                     // Estructura
                     let miNodo = document.createElement('div');
-                    miNodo.classList.add('card', 'col-sm-4');
+                    miNodo.classList.add('card', 'col-sm-12');
                     // Body
                     let miNodoCardBody = document.createElement('div');
                     miNodoCardBody.classList.add('card-body');
@@ -55,18 +55,18 @@
                     miNodoTitle.textContent = info['nombre'];
                     // Imagen
                     let miNodoImagen = document.createElement('img');
-                    miNodoTitle.classList.add('img-fluid');
-                    miNodoTitle.setAttribute('src', info['imagen']);
+                    miNodoImagen.classList.add('img-fluid');
+                    miNodoImagen.setAttribute('src', info['imagen']);
                     // Precio
                     let miNodoPrecio = document.createElement('p');
-                    miNodoTitle.classList.add('card-text');
-                    miNodoTitle.textContent = 'S/.' + info['precio'];
+                    miNodoPrecio.classList.add('card-text');
+                    miNodoPrecio.textContent = 'S/.' + info['precio'];
                     // Boton 
                     let miNodoBoton = document.createElement('button');
-                    miNodoTitle.classList.add('btn', 'btn-primary');
-                    miNodoTitle.textContent = '+';
-                    miNodoTitle.setAttribute('marcador', info['id']);
-                    miNodoTitle.addEventListener('click', anyadirCarrito);
+                    miNodoBoton.classList.add('btn', 'btn-primary');
+                    miNodoBoton.textContent = '+';
+                    miNodoBoton.setAttribute('marcador', info['id']);
+                    miNodoBoton.addEventListener('click', anyadirCarrito);
                     // Insertamos
                     miNodoCardBody.appendChild(miNodoImagen);
                     miNodoCardBody.appendChild(miNodoTitle);
@@ -161,7 +161,7 @@
     <div class="container">
         <div class="row">
             <!-- Elementos generados a partir del JSON -->
-            <main id="items" class="col-sm-12 "></main>
+            <main id="items" class="col-sm-12 row"></main>
         </div>
             <!-- Carrito -->
             <footer class="col-sm-12">
