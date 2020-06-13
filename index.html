@@ -45,7 +45,7 @@
                 for (let info of baseDeDatos) {
                     // Estructura
                     let miNodo = document.createElement('div');
-                    miNodo.classList.add('card', 'col-sm-12');
+                    //miNodo.classList.add('card', 'col-sm-12');
                     // Body
                     let miNodoCardBody = document.createElement('div');
                     miNodoCardBody.classList.add('card-body');
@@ -67,13 +67,13 @@
                     miNodoBoton.textContent = '+';
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
-                    // Insertamos 
-                    $items.appendChild(miNodoImagen);
-                    $items.appendChild(miNodoTitle);
-                    $items.appendChild(miNodoPrecio);
-                    $items.appendChild(miNodoBoton);
-                  let salto = document.createElement('br');
-                    miNodo.appendChild(salto);
+                    // Insertamos
+                    miNodoCardBody.appendChild(miNodoImagen);
+                    miNodoCardBody.appendChild(miNodoTitle);
+                    miNodoCardBody.appendChild(miNodoPrecio);
+                    miNodoCardBody.appendChild(miNodoBoton);
+                    miNodo.appendChild(miNodoCardBody);
+                    $items.appendChild(miNodo);
                 }
             }
 
