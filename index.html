@@ -9,59 +9,59 @@
           window.onload = function () {
             // Variables
             let baseDeDatos = [
-                {
+                  {
                     id: 1,
                     nombre: 'Pan Frances x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 },
                 {
                     id: 2,
                     nombre: 'Ciabatta x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 },
                 {
                     id: 3,
                     nombre: 'Carioco x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 },
 				{
                     id: 4,
                     nombre: 'Coliza x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 },
 				{
                     id: 5,
                     nombre: 'Caracol x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 },
 				{
                     id: 6,
                     nombre: 'Yema (redondo y largo) x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 },
 				{
                     id: 7,
                     nombre: 'Maiz x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 },
 				{
                     id: 8,
                     nombre: 'Integral x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 },
 				{
                     id: 9,
                     nombre: 'Manteca x6',
                     precio: 1,
-                    imagen: 'https://source.unsplash.com/random/80x80/?potato&sig=1'
+                    imagen: 'https://source.unsplash.com/random/50x50'
                 }
             ]
             let $items = document.querySelector('#items');
@@ -97,7 +97,7 @@
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
                     // Insertamos
-                    //miNodoCardBody.appendChild(miNodoImagen);
+                    miNodoCardBody.appendChild(miNodoImagen);
                     miNodoCardBody.appendChild(miNodoTitle);
                     miNodoCardBody.appendChild(miNodoPrecio);
                     miNodoCardBody.appendChild(miNodoBoton);
