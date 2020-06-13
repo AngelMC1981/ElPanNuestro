@@ -51,19 +51,19 @@
                     miNodoCardBody.classList.add('card-body');
                     // Titulo
                     let miNodoTitle = document.createElement('h5');
-                    miNodoTitle.classList.add('card-title');
+                    //miNodoTitle.classList.add('card-title');
                     miNodoTitle.textContent = info['nombre'];
                     // Imagen
                     let miNodoImagen = document.createElement('img');
-                    miNodoImagen.classList.add('img-fluid');
+                    //miNodoImagen.classList.add('img-fluid');
                     miNodoImagen.setAttribute('src', info['imagen']);
                     // Precio
-                    let miNodoPrecio = document.createElement('h5');
-                    miNodoPrecio.classList.add('card-text');
+                    let miNodoPrecio = document.createElement('p');
+                    //miNodoPrecio.classList.add('card-text');
                     miNodoPrecio.textContent = 'S/.'+info['precio'];
                     // Boton 
                     let miNodoBoton = document.createElement('button');
-                    miNodoBoton.classList.add('btn', 'btn-primary');
+                    //miNodoBoton.classList.add('btn', 'btn-primary');
                     miNodoBoton.textContent = '+';
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
