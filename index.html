@@ -68,11 +68,11 @@
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
                     // Insertamos
-                    miNodoCardBody.appendChild(miNodoImagen + miNodoTitle + miNodoPrecio + miNodoBoton);
-                    //miNodoCardBody.appendChild(miNodoTitle);
-                    //miNodoCardBody.appendChild(miNodoPrecio);
-                    //miNodoCardBody.appendChild(miNodoBoton);
-                    //miNodo.appendChild(miNodoCardBody);
+                    //miNodoCardBody.appendChild(miNodoImagen);
+                    miNodoCardBody.appendChild(miNodoTitle);
+                    miNodoCardBody.appendChild(miNodoPrecio);
+                    miNodoCardBody.appendChild(miNodoBoton);
+                    miNodo.appendChild(miNodoCardBody);
                     $items.appendChild(miNodo);
                 }
             }
