@@ -69,12 +69,9 @@
                     miNodoBoton.addEventListener('click', anyadirCarrito);
                     // Insertamos 
                     miNodoCardBody.appendChild(miNodoImagen);
-                    insertAfter(miNodoImagen,miNodoTitle)
-                    insertAfter(miNodoTitle,miNodoPrecio)
-                    insertAfter(miNodoPrecio,miNodoBoton)
-                    //miNodoCardBody.appendChild(miNodoTitle);
-                    //miNodoCardBody.appendChild(miNodoPrecio);
-                    //miNodoCardBody.appendChild(miNodoBoton);
+                    miNodoCardBody.appendChild(miNodoTitle);
+                    miNodoCardBody.appendChild(miNodoPrecio);
+                    miNodoCardBody.appendChild(miNodoBoton);
                     miNodo.appendChild(miNodoCardBody);
                     $items.appendChild(miNodo);
                 }
@@ -153,13 +150,6 @@
             }
             // Eventos
 
-            function insertAfter(e,i){ 
-                if(e.nextSibling){ 
-                    e.parentNode.insertBefore(i,e.nextSibling); 
-                } else { 
-                    e.parentNode.appendChild(i); 
-                }
-            }
               
             // Inicio
             renderItems();
@@ -171,7 +161,7 @@
     <div class="container">
         <div class="row">
             <!-- Elementos generados a partir del JSON -->
-            <main id="items" class="col-sm-12 row"></main>
+            <main id="items" ></main>
         </div>
             <!-- Carrito -->
             <footer class="col-sm-12">
