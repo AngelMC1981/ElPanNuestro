@@ -173,13 +173,11 @@
                         return itemBaseDatos['id'] == item;
                     });
                     total = total + miItem[0]['precio'];
-		    let texto = texto +" "+ miItem;
                 }
                 // Formateamos el total para que solo tenga dos decimales
                 let totalDosDecimales = total.toFixed(2);
                 // Renderizamos el precio en el HTML
                 $total.textContent = totalDosDecimales;
-		    alert(texto);
             }
             // Eventos
 
