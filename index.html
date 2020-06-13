@@ -68,11 +68,11 @@
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
                     // Insertamos 
-                    miNodoCardBody.appendChild(miNodoImagen);
-                    miNodoCardBody.appendChild(miNodoTitle);
-                    miNodoCardBody.appendChild(miNodoPrecio);
-                    miNodoCardBody.appendChild(miNodoBoton);
-                    miNodo.appendChild(miNodoCardBody);
+                    miNodo.appendChild(miNodoImagen);
+                    miNodo.appendChild(miNodoTitle);
+                    miNodo.appendChild(miNodoPrecio);
+                    miNodo.appendChild(miNodoBoton);
+                    //miNodo.appendChild(miNodoCardBody);
                     $items.appendChild(miNodo);
                 }
             }
@@ -161,7 +161,7 @@
     <div class="container">
         <div class="row">
             <!-- Elementos generados a partir del JSON -->
-            <main id="items" ></main>
+            <main id="items" class="col-sm-12 row"></main>
         </div>
             <!-- Carrito -->
             <footer class="col-sm-12">
